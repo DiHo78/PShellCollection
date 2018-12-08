@@ -19,6 +19,3 @@ $blob.icloudblob.setstandardblobtier("Archive")
 
 $blob = Get-AzureStorageBlob -Container $Container -Context $ctx | Where-Object {$_.Name -like "*.jpg"}  
 $blob | Out-GridView
-
-
-
