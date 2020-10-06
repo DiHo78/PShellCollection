@@ -1,6 +1,6 @@
 ﻿<#
-Beispielscript, wie man einen Netzwertk-Adapter an einer VM schnell ab oder anschalten kann
-Man muss schon mit dem Vcenter verbunden sein!
+Example script to quickly disable / enable a virt network adapter.
+Don't forget: You need a connection to your VCenter
 #>
 $TargetMachine = "MyTargetVM"
 

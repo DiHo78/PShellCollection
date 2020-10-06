@@ -1,9 +1,11 @@
-﻿Set-PowerCLIConfiguration -InvalidCertificateAction Warn
+﻿
+
+Set-PowerCLIConfiguration -InvalidCertificateAction Warn
 Connect-VIServer -Server MyVcenter.domain.local -Verbose
 
-get-cluster "SQLCluster" | get-vm 
+get-cluster "My-SQLCluster" | get-vm 
 
-$VMs = get-cluster "SQLCluster" | get-vm 
+$VMs = get-cluster "My-SQLCluster" | get-vm 
 
 $vms | Select-Object "Name" | Export-Csv "C:\temp\SQLVms.csv"
 

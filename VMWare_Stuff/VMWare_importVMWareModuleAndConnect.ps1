@@ -1,7 +1,6 @@
 ﻿
 Import-Module VMware.PowerCLI -Verbose 
 Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false
-
 #get-help Set-PowerCLIConfiguration -Examples
 Connect-VIServer -Server MyVcenter.domain.local -Verbose
 

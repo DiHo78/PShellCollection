@@ -1,4 +1,6 @@
 ﻿#just a few snippets
+# because sometimes you may want to persist some additional
+# information on a vm 
 
 $vmname = VMware.vimautomation.core\get-vm -Name MyServer
 $vmname
