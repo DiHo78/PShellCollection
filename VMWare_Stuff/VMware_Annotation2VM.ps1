@@ -17,13 +17,12 @@ $AppNameVal = "Monitoring"
 $AppTierVal = "SQL"
 
 
-ForEach ($vmname in $vms)
-{
-$vm = get-vm -Name $vmname;
-Set-Annotation -Entity $vm -CustomAttribute $AppEnvAtt -value $AppEnvVal
-Set-Annotation -Entity $vm -CustomAttribute $AppLocAtt -value $AppLocVal
-Set-Annotation -Entity $vm -CustomAttribute $AppNameAtt -Value $AppNameVal
-Set-Annotation -Entity $vm -CustomAttribute $AppTierAtt -Value $AppTierVal
+ForEach ($vmname in $vms) {
+    $vm = get-vm -Name $vmname;
+    Set-Annotation -Entity $vm -CustomAttribute $AppEnvAtt -value $AppEnvVal
+    Set-Annotation -Entity $vm -CustomAttribute $AppLocAtt -value $AppLocVal
+    Set-Annotation -Entity $vm -CustomAttribute $AppNameAtt -Value $AppNameVal
+    Set-Annotation -Entity $vm -CustomAttribute $AppTierAtt -Value $AppTierVal
 }
 
 #just have another look

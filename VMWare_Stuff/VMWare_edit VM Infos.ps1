@@ -23,7 +23,7 @@ Set-VM -VM "MyServer"  -description "test entry" -Verbose
 #get-help New-CustomAttribute  -Examples
 
 #New-CustomAttribute -Name "Responsibility" -TargetType VirtualMachine 
-Get-CustomAttribute |Out-GridView
+Get-CustomAttribute | Out-GridView
 Get-Annotation -Entity $vm -CustomAttribute "Responsibility"
 $CustAtt = "Responsibility"
 
@@ -34,10 +34,9 @@ $CustAtt = "Responsibility"
 $vms = get-vm -Name "SQL*"
 $vms
 
-ForEach ($vmname in $vms)
-{
-$vm = get-vm -Name @vmname;
-Set-Annotation -Entity $vm -CustomAttribute $CustAtt -Value "Dirk Hondong" 
+ForEach ($vmname in $vms) {
+    $vm = get-vm -Name @vmname;
+    Set-Annotation -Entity $vm -CustomAttribute $CustAtt -Value "Dirk Hondong" 
 }
 
 

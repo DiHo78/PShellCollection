@@ -17,7 +17,7 @@ get-help Remove-Snapshot -Examples
 
 New-Snapshot -VM "AdminVM" -Name "MyTestSnapshot" 
 
-$mySnapshot = Get-Snapshot -VM "AdminVM"  
+$mySnapshot = Get-Snapshot -VM "AdminVM"  #just 2 take a look what's inside
 
 Get-Snapshot -VM "AdminVM" -Name "VM-Snapsho*"  | Remove-Snapshot  -Verbose -RemoveChildren
 
