@@ -7,7 +7,7 @@ $ctx = New-AzureStorageContext -StorageAccountName $StgAcc -StorageAccountKey $S
 $Container = "raw2011"
  
 #Get all the blobs in container
-$blob = Get-AzureStorageBlob -Container $Container -Context $ctx | Where-Object {($_.Name -like "*Q*") -and ($_.name -notlike "*THUMB*") -and ($_.name -notlike "*.db*" )}  
+$blob = Get-AzureStorageBlob -Container $Container -Context $ctx | Where-Object { ($_.Name -like "*Q*") -and ($_.name -notlike "*THUMB*") -and ($_.name -notlike "*.db*" ) }  
 $blob | Out-GridView
 
 
@@ -17,5 +17,5 @@ $blob | Out-GridView
 $blob.icloudblob.setstandardblobtier("Archive")  
 
 
-$blob = Get-AzureStorageBlob -Container $Container -Context $ctx | Where-Object {$_.Name -like "*.jpg"}  
+$blob = Get-AzureStorageBlob -Container $Container -Context $ctx | Where-Object { $_.Name -like "*.jpg" }  
 $blob | Out-GridView
